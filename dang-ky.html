@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng Ký - Trường THPT Chuyên Nguyễn Quang Diêu</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <!-- Logo trường (Bấm vào quay về trang chủ index.html) -->
+          <td align="left" valign="middle">
+            <a href="index.html">
+              <img
+                src="logo-truong.jpg"
+                alt="Logo Trường THPT Chuyên Nguyễn Quang Diêu"
+                width="100"
+              />
+            </a>
+            <h2>TRƯỜNG THPT CHUYÊN NGUYỄN QUANG DIÊU</h2>
+          </td>
+
+          <td align="right" valign="top">
+            <p>
+              <a href="dang-nhap.html">Đăng nhập</a> |
+              <a href="dang-ky.html"><strong>Đăng kí</strong></a>
+            </p>
+          </td>
+        </tr>
+      </table>
+      <hr />
+    </header>
+
+    <main>
+      <section>
+        <h1>Đăng Ký Tài Khoản Mới</h1>
+        <p>
+          Tạo tài khoản để bắt đầu chia sẻ bài viết lên các chuyên mục của nhà
+          trường.
+        </p>
+
+        <form action="dang-nhap.html" method="post">
+          <p>
+            <label for="fullname">Họ và tên (*):</label><br />
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              size="40"
+              required
+            />
+          </p>
+          <p>
+            <label for="reg-email">Email liên hệ (*):</label><br />
+            <input
+              type="email"
+              id="reg-email"
+              name="reg_email"
+              size="40"
+              required
+            />
+          </p>
+          <p>
+            <label for="reg-user">Tên đăng nhập (*):</label><br />
+            <input
+              type="text"
+              id="reg-user"
+              name="reg_user"
+              size="40"
+              required
+            />
+          </p>
+          <p>
+            <label for="reg-pass">Mật khẩu (*):</label><br />
+            <input
+              type="password"
+              id="reg-pass"
+              name="reg_pass"
+              size="40"
+              required
+            />
+          </p>
+          <p>
+            <label for="confirm-pass">Xác nhận mật khẩu (*):</label><br />
+            <input
+              type="password"
+              id="confirm-pass"
+              name="confirm_pass"
+              size="40"
+              required
+            />
+          </p>
+          <p>
+            <button type="submit">Đăng Ký</button>
+            <button type="reset">Hủy</button>
+          </p>
+          <p>
+            Đã có tài khoản? <a href="dang-nhap.html">Đăng nhập tại đây</a>.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer>
+      <h3>THÔNG TIN TRƯỜNG HỌC</h3>
+      <p><strong>Địa chỉ:</strong> 458 Lê Đại Hành, Mỹ Trà, Đồng Tháp</p>
+      <p><strong>Ngày thành lập:</strong> 8 tháng 7, 2011</p>
+      <p><strong>Tỉnh:</strong> Đồng Tháp</p>
+      <p><strong>Loại trường học:</strong> Trường công lập</p>
+      <p><strong>Số điện thoại:</strong> 0277 3879 369</p>
+      <br />
+      <p>&copy; 2026 Trường THPT Chuyên Nguyễn Quang Diêu.</p>
+    </footer>
+  </body>
+</html>

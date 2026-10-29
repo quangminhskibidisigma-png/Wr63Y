@@ -1,0 +1,243 @@
+/* --- BIẾN MÀU SẮC & CƠ BẢN --- */
+:root {
+    --primary-color: #004d99; /* Xanh dương chủ đạo */
+    --secondary-color: #0073e6; /* Xanh sáng */
+    --accent-color: #ffcc00; /* Vàng điểm nhấn */
+    --text-color: #333333;
+    --bg-light: #f4f7f6;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+/* --- HEADER & THANH ĐIỀU HƯỚNG (NAVBAR) --- */
+header {
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Khu vực logo và tiêu đề chính */
+.header-top {
+    display: flex;
+    align-items: center;
+    padding: 15px 5%;
+    gap: 20px;
+    background: linear-gradient(135deg, #004d99, #0066cc);
+    color: var(--white);
+}
+
+.header-top img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    background: var(--white);
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.header-top h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Thanh menu điều hướng ngang */
+nav ul {
+    list-style: none;
+    display: flex;
+    background: var(--white);
+    padding: 0 5%;
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    background-color: #f0f4f8;
+}
+
+/* Nút Đăng nhập / Đăng kí phía góc (nếu nằm ngoài hoặc trong nav) */
+.auth-links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.auth-links a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.auth-links a[href*="dang-nhap"], .auth-links a:first-child {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.auth-links a[href*="dang-nhap"]:hover, .auth-links a:first-child:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.auth-links a[href*="dang-ki"], .auth-links a:last-child {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.auth-links a[href*="dang-ki"]:hover, .auth-links a:last-child:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* --- NỘI DUNG CHÍNH (MAIN CONTENT) --- */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* Ảnh bìa */
+main img[alt*="ảnh bìa"] {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Tiêu đề bài viết & Slogan */
+h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+p {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+/* --- THANH TÌM KIẾM --- */
+.search-section {
+    background: #f9fbfc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e1e8ed;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-section input[type="text"] {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.search-section input[type="text"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 77, 153, 0.2);
+}
+
+.search-section button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-section button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* --- PHẦN THÔNG TIN TRƯỜNG HỌC (FOOTER/BOX INFO) --- */
+.school-info {
+    background: #eef4f9;
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border-top: 4px solid var(--primary-color);
+}
+
+.school-info ul {
+    list-style: none;
+}
+
+.school-info li {
+    padding: 6px 0;
+    font-size: 1rem;
+}
+
+.school-info li strong {
+    color: var(--primary-color);
+}
+
+
+/* --- FOOTER BẢN QUYỀN --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9rem;
+    background: var(--white);
+    border-top: 1px solid #eaeaea;
+    margin-top: 40px;
+}
